@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo" value="BN">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+var formData = new FormData(),
+    file = document.getElementById('demo').value,
+    xhr = new XMLHttpRequest();
+
+formData.append('file', file);
+xhr.open('POST', 'ajax_info2.txt');
+xhr.send(formData);
+
+
+</script>
+
